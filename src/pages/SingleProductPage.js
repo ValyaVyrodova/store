@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
-import { useParams, useHistory } from 'react-router-dom'
-import { useProductsContext } from '../context/products_context'
-import { single_product_url as url } from '../utils/constants'
-import { formatPrice } from '../utils/helpers'
+import React, { useEffect } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
+import { useProductsContext } from '../context/products_context';
+import { single_product_url as url } from '../utils/constants';
+import { formatPrice } from '../utils/helpers';
 import {
   Loading,
   Error,
@@ -10,11 +10,12 @@ import {
   AddToCart,
   Stars,
   PageHero,
-} from '../components'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+} from '../components';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const SingleProductPage = () => {
+
   const { id } = useParams();
   const history = useHistory()
   const {
@@ -23,6 +24,7 @@ const SingleProductPage = () => {
     single_product: product,
     fetchSingleProduct
   } = useProductsContext()
+
 
   useEffect(() => {
     fetchSingleProduct(`${url}${id}`)
@@ -53,7 +55,9 @@ const SingleProductPage = () => {
     id: sku,
     company,
     images
-  } = product;
+  } = product
+
+  console.log(product)
 
   return (
     <Wrapper>

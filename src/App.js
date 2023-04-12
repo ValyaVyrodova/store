@@ -12,6 +12,7 @@ import {
   PrivateRouter
 } from './pages'
 import Product from './components/Product'
+import ProductsPage from './pages/ProductsPage'
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
           <Cart />
         </Route>
         <Route exact path='/products'>
-          <Product />
+          <ProductsPage />
         </Route>
         <Route exact path='/products/:id' children={<SingleProduct />} />
         <Route exact path='/checkout'>

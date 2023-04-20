@@ -31,7 +31,7 @@ const Sort = () => {
         <select
           name='sort'
           id='sort'
-          className='sort-input'
+          className='sort-input' 
           value={sort}
           onChange={updateSort}
         >

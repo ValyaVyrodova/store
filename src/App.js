@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Navbar, Sidebar, Footer } from './components'
-import styled from 'styled-components'
+
 import {
   Home,
   SingleProduct,
@@ -12,7 +12,6 @@ import {
   PrivateRoute,
   AuthWrapper,
 } from './pages'
-import Product from './components/Product'
 import ProductsPage from './pages/ProductsPage'
 
 

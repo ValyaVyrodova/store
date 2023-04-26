@@ -9,7 +9,6 @@ import {
 const cart_reducer = (state, action) => {
   if (action.type === ADD_TO_CART) {
     const { id, color, amount, product } = action.payload;
-    console.log(action.payload)
     const tempItem = state.cart.find((i) => i.id === id + color);
     if (tempItem) {
       const tempCart = state.cart.map((cartItem) => {
@@ -67,15 +66,14 @@ const cart_reducer = (state, action) => {
           }
           return { ...item, amount: newAmount }
         }
-      } else {
-        return item
       }
+      return item
     })
 
     return { ...state, cart: tempCart }
   }
 
-  if (action.type == COUNT_CART_TOTALS) {
+  if (action.type === COUNT_CART_TOTALS) {
     const { total_items, total_amount } = state.cart.reduce((total, cartItem) => {
       const { amount, price } = cartItem
 

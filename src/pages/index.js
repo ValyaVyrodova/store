@@ -9,6 +9,7 @@ import PrivateRoute from './PrivateRoute'
 import AuthWrapper from './AuthWrapper'
 
 
+
 export {
     Home,
     Products,
@@ -18,5 +19,5 @@ export {
     Error,
     Checkout,
     PrivateRoute,
-    AuthWrapper
+    AuthWrapper,
 }

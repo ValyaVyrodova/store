@@ -15,7 +15,9 @@ import styled from 'styled-components'
 // import { useHistory } from 'react-router-dom'
 
 const CheckoutForm = () => {
-  return <h4>hello from Stripe Checkout </h4>
+  return (
+  <h2>hello from Stripe Checkout </h2>
+  )
 }
 
 const StripeCheckout = () => {

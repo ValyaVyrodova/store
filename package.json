@@ -18,8 +18,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "react-router-dom": "^5.3.4",
-    "react-scripts": "5.0.1",
-    "sort-by": "^1.2.0",
+    "react-scripts": "^2.1.3",
+    "sort-by": "^0.0.2",
     "stripe": "^10.16.0",
     "styled-components": "^5.3.9",
     "web-vitals": "^2.1.4"
@@ -29,7 +29,7 @@
     "build": "CI= react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "netlify dev"
+    "dev": "netlify dev --openssl-legacy-provider"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +50,6 @@
     ]
   },
   "devDependencies": {
-    "netlify-cli": "^12.1.0"
+    "netlify-cli": "^2.71.0"
   }
 }

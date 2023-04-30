@@ -12,17 +12,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // dev-ajr6yugysyg3sng4.us.auth0.com
 // 0JIAUWuOU9scOqbVcS3uwcAG0SrYEXx6
-const REACT_APP_AUTH_DOMAIN = 'dev-ajr6yugysyg3sng4.us.auth0.com'
-const REACT_APP_AUTH_CLIENT_ID = '0JIAUWuOU9scOqbVcS3uwcAG0SrYEXx6'
-
-console.log('ENV CHECK!')
-console.log(process.env.REACT_APP_AUTH_DOMAIN)
-console.log(process.env.REACT_APP_AUTH_CLIENT_ID)
 
 root.render(
     <Auth0Provider
-        domain={REACT_APP_AUTH_DOMAIN}
-        clientId={REACT_APP_AUTH_CLIENT_ID}
+        domain={process.env.REACT_APP_AUTH_DOMAIN}
+        clientId={process.env.REACT_APP_AUTH_CLIENT_ID}
         redirectUri={window.location.origin}
         cacheLocation='localstorage'>
         <UserProvider>

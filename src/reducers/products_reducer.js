@@ -20,8 +20,6 @@ const products_reducer = (state, action) => {
     return { ...state, products_loading: true }
   }
   if (action.type === GET_PRODUCTS_SUCCESS) {
-    console.log('GET_PRODUCTS_SUCCESS')
-    console.log(action)
     const featured_products = action.payload.filter(
       (product) => product.featured === true
     )
